@@ -9,6 +9,42 @@ Les formations concernées sont les suivantes:
 - Docker
 - Ansible
 - Gitlab
+## Utilisation
+
+Ce Module et son sous-module viennent avec des fichiers .tfvars permettant de charger les paramètres spécifiques à chaque formation
+
+Le formateur devra se munir de credentials AWS (via awscli ou une clé d'accès/clé secrète) et d'une paire de clé ssh.
+
+1. Téléchargez le repo
+```
+git clone https://github.com/ilkilab/infra-labs-aws.git
+```
+2. Dans le dossier, créez la clé ssh
+```
+ssh-keygen -f ssh-formation
+```
+3. Créez un fichier login.tf avec vos infos de connexions ou connectez-vous à awscli
+```
+awscli configure
+```
+ou
+```
+provider "aws" {
+    region = REGION DE DEPLOIEMENT DES VM
+    access_key = CLE D'ACCES AWS
+    secret_key = CLE SECRETE AWS
+}
+```
+4. Téléchargez les providers
+```
+terraform init
+```
+5. Testez le déploiement d'une infra
+```
+terraform plan --var-file docker.tfvars
+```
+ 
+
 ## Module Formation
 #### Le module formation utilisé déploie l'infrastructure suivante:
 ##### Pour tout le monde:
