@@ -23,7 +23,7 @@ resource "local_file" "ip" {
   filename = "formation_${formatdate("DD_MM_YY",timestamp())}.csv"
   content = local.content
   depends_on = [
-    module.infra_k8s
+    module.infra_formation
   ]
 }
 
