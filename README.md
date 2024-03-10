@@ -1,4 +1,8 @@
 # infra-labs-aws
+
+| :exclamation: REPO NON FONCTIONNEL POUR L'INSTANT! |
+| --- |
+
 Ce repo a vocation à accueillir les modules et scripts terraforms utilisé pour déployer les lab de formation sur des vms aws.
 Les formations concernées sont les suivantes:
 - Préparation CKA
