@@ -4,5 +4,5 @@ locals {
 }
 
 output "ips" {
-  value = join(";", local.ip_list)
+  value = ";${join(";", local.ip_list)}"
 }

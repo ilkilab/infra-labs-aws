@@ -8,7 +8,8 @@
 # Crash log files
 crash.log
 crash.*.log
-
+#generated csv files
+*.csv
 login.tf
 ssh-formation*
 # Ignore override files as they are usually used to override resources locally and so
