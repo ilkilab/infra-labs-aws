@@ -30,7 +30,10 @@ EOF
   subnet_id              = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.allow_http.id]
   key_name               = var.public_key
-  
+  root_block_device {
+    volume_size = 30
+  }
+  source_dest_check = false
   tags = {
     Name = each.value
     DoNotDelete = "true"
